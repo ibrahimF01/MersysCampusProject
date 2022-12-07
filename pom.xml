@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Cucumber3Yerel</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>  <!--  Bağımlılıklar    -->
+
+        <!--  Selenium için eklendi -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.6.0</version>
+        </dependency>
+
+        <!-- Cucumber için yüklendi. -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.5.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--TestNG için eklendi -->
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.7</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Cucumber ile test ng nin bağlantısı cucumber ile aynı versiyon olmalı -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.5.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- WebDriver  -->
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Excel işlemleri için aşağıdaki 2 depency ye kullanılıyor-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <!-- extentreport için eklendi -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-testng-adapter</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!-- masterthoughtreport için eklendi -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- JDBC için eklendi -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version>
+        </dependency>
+    </dependencies>
+
+
+<!--    <build>-->
+<!--        <plugins>-->
+
+<!--            <plugin>&lt;!&ndash;derlemek için&ndash;&gt;-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.0.0-M1</version>-->
+<!--                <configuration>-->
+
+<!--&lt;!&ndash;                    <suiteXmlFiles>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <suiteXmlFile>src/test/java/XMLFiles/ParallelTesting_MasterReport.xml</suiteXmlFile>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </suiteXmlFiles>&ndash;&gt;-->
+<!--&lt;!&ndash;                    Paralel çalışma yok iken direkt runner classı çalıştırmak için aşağıdaki bölüm kullanılır&ndash;&gt;-->
+<!--&lt;!&ndash;                    <includes>&ndash;&gt;-->
+<!--&lt;!&ndash;                        &lt;!&ndash; for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        <include>**/_04_TestRunnerSmoke.java</include>&ndash;&gt;-->
+<!--&lt;!&ndash;                        &lt;!&ndash;                        <include>**/runners/*TestRunner*.java</include>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    </includes>&ndash;&gt;-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+<!--            <plugin>-->
+<!--                <groupId>net.masterthought</groupId>-->
+<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+<!--                <version>2.8.0</version>-->
+
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>execution</id>-->
+<!--                        <phase>test</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>generate</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <projectName>Project Name</projectName>-->
+<!--                            <outputDirectory>${project.build.directory}/Report/cucumber-reports</outputDirectory>-->
+<!--                            <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>-->
+<!--                            <skippedFails>true</skippedFails>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+
+<!--    </build>-->
+
+<build>
+
+    <plugins>
+        <plugin><!--derlemek için-->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M1</version>
+            <configuration>
+
+                <includes>
+                    <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
+                    <include>**/_04_TestRunnerSmoke.java</include>
+                </includes>
+                <testFailureIgnore>true</testFailureIgnore>
+
+            </configuration>
+        </plugin>
+    </plugins>
+
+</build>
+
+    <profiles>
+        <profile>
+            <id>Smoke_yeni</id>
+            <build>
+
+                <plugins>
+                    <plugin><!--derlemek için-->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.0.0-M1</version>
+                        <configuration>
+
+                            <includes>
+                                <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
+                                <include>**/_04_TestRunnerSmoke.java</include>
+                            </includes>
+                            <testFailureIgnore>true</testFailureIgnore>
+
+                        </configuration>
+                    </plugin>
+                </plugins>
+
+            </build>
+        </profile>
+
+        <profile>
+            <id>Regression</id>
+            <build>
+
+                <plugins>
+                    <plugin><!--derlemek için-->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.0.0-M1</version>
+                        <configuration>
+
+                            <includes>
+                                <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
+                                <include>**/_06_TestRunnerRegressionWithPlugin.java</include>
+                            </includes>
+                            <testFailureIgnore>true</testFailureIgnore>
+
+                        </configuration>
+                    </plugin>
+                </plugins>
+
+            </build>
+        </profile>
+
+    </profiles>
+
+</project>

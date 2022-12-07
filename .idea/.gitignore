@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+*.properties
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+target/
+cmake-build-*/

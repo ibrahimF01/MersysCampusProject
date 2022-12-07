@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1"  parallel="tests" thread-count="2">
+
+
+    <!--    <listeners>  https://github.com/extent-framework/extentreports-testng-adapter/issues/14  -->
+    <!--            aşağıdaki class name i aratalım-->
+    <!--        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"></listener>-->
+    <!--    </listeners>-->
+    <!--    https://www.programsbuzz.com/article/cucumber-testng-extent-report-using-adapter bu sayfadaki neden olmadı -->
+
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter"/>
+    </listeners>
+
+    <test name="Test 1">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="Runners._08_TestRunnerParallel_ExtendReport"></class>
+        </classes>
+    </test>
+    <test name="Test 2">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="Runners._08_TestRunnerParallel_ExtendReport"></class>
+        </classes>
+    </test>
+</suite>
