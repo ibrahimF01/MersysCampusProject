@@ -24,8 +24,8 @@ public class _01_LoginSteps {
         cc.findAndClick("loginButton");
     }
 
-    @Then("User should login successfuly")
-    public void userShouldLoginSuccessfuly() {
+    @Then("User should login successfully")
+    public void userShouldLoginSuccessfully() {
         cc.findAndContainsText("dashboard","Dashboard");
         cc.findAndClick("acceptCookies");
     }
