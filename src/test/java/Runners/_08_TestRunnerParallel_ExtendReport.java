@@ -13,7 +13,7 @@ import org.testng.annotations.Parameters;
 )
 
 public class _08_TestRunnerParallel_ExtendReport extends AbstractTestNGCucumberTests {
-    @BeforeClass(alwaysRun = true) // bazı java versiyon hatalırı için
+    @BeforeClass(alwaysRun = true) // bazı java versiyon hataları için
     @Parameters("browser")
     public void beforeClass(String browser)
     {
@@ -24,7 +24,7 @@ public class _08_TestRunnerParallel_ExtendReport extends AbstractTestNGCucumberT
 
     @AfterClass
     public static void writeExtentReport() {
-        ExtentService.getInstance().setSystemInfo("User Name", "İsmet Temur");
+        ExtentService.getInstance().setSystemInfo("User Name", "Huseyin YILMAZ");
         ExtentService.getInstance().setSystemInfo("Application Name", "Campus");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name").toString());
         ExtentService.getInstance().setSystemInfo("Department", "QA");
