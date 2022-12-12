@@ -37,6 +37,36 @@ public class CommonContent extends Parent{
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
 
+    @FindBy(xpath="//span[text()='Field Settings']")
+    private WebElement fieldSettings;
+
+    @FindBy(xpath="(//mat-option/span[@class='mat-option-text'])[1]")
+    private WebElement fSet_exam; // no list returned!!!
+
+    @FindBy(xpath="(//mat-option/span[@class='mat-option-text'])[2]")
+    private WebElement fSet_student;
+
+    @FindBy(xpath="(//mat-option/span[@class='mat-option-text'])[3]")
+    private WebElement fSet_employee;
+
+    @FindBy(xpath="(//ms-edit-button//button)[1]")
+    private WebElement fSet_edit1;
+
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='order']/input")
+    private WebElement edit_order;
+
+    @FindBy(xpath="(//ms-dialog-content[@class='mat-dialog-content ng-pristine ng-valid ng-touched']//span[@class='mat-slide-toggle-thumb'])[1]")
+    private WebElement edit_required;
+
+    @FindBy(xpath="(//ms-dialog-content[@class='mat-dialog-content ng-pristine ng-valid ng-touched']//span[@class='mat-slide-toggle-thumb'])[2]")
+    private WebElement edit_enabled;
+
+    @FindBy(xpath="(//ms-dialog-content[@class='mat-dialog-content ng-pristine ng-valid ng-touched']//span[@class='mat-slide-toggle-thumb'])[3]")
+    private WebElement edit_array;
+
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='size']/input")
+    private WebElement edit_arrayValues;
+
     //DialogContent
     @FindBy(id="mat-input-0")
     private WebElement username;
