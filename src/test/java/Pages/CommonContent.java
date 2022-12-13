@@ -42,13 +42,13 @@ public class CommonContent extends Parent{
     @FindBy(xpath="//span[text()='Field Settings']")
     private WebElement fieldSettings;
 
-    @FindBy(xpath="(div[class='mat-select-arrow ng-tns-c96-61']")
-    private WebElement fSet_exam; // no list returned!!!
+    @FindBy(xpath="//div[@id='mat-select-value-7']")
+    private WebElement fSet_entityType; // no list returned!!!
 
-    @FindBy(xpath="(//div[@role='listbox']//mat-option[@role='option']/span)[2]")
+    @FindBy(xpath="(//mat-option[@role='option']//span[@class='mat-option-text'])[2]")
     private WebElement fSet_student;
 
-    @FindBy(xpath="(//div[@role='listbox']//mat-option[@role='option']/span)[3]")
+    @FindBy(xpath="(//mat-option[@role='option']/span)[3]")
     private WebElement fSet_employee;
 
     @FindBy(xpath="(//ms-edit-button//button)[1]")
@@ -60,13 +60,13 @@ public class CommonContent extends Parent{
     @FindBy(xpath="//ms-integer-field[@formcontrolname='order']/input")
     private WebElement edit_order;
 
-    @FindBy(xpath="(//ms-dialog-content[@class='mat-dialog-content ng-pristine ng-valid ng-touched']//span[@class='mat-slide-toggle-thumb'])[1]")
+    @FindBy(xpath="(//span[@class='mat-slide-toggle-bar'])[1]")
     private WebElement edit_required;
 
-    @FindBy(xpath="(//ms-dialog-content[@class='mat-dialog-content ng-pristine ng-valid ng-touched']//span[@class='mat-slide-toggle-thumb'])[2]")
+    @FindBy(xpath="(//span[@class='mat-slide-toggle-bar'])[2]")
     private WebElement edit_enabled;
 
-    @FindBy(xpath="(//ms-dialog-content[@class='mat-dialog-content ng-pristine ng-valid ng-touched']//span[@class='mat-slide-toggle-thumb'])[3]")
+    @FindBy(xpath="(//span[@class='mat-slide-toggle-bar'])[3]")
     private WebElement edit_array;
 
     @FindBy(xpath="//ms-integer-field[@formcontrolname='size']/input")
@@ -171,8 +171,9 @@ public class CommonContent extends Parent{
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "fieldSettings" : myElement =fieldSettings; break;
-            case "fSet_exam" : myElement =fSet_exam; break;
+            case "fSet_entityType" : myElement =fSet_entityType; break;
             case "fSet_student" : myElement =fSet_student; break;
+            case "fSet_employee" : myElement =fSet_employee; break;
             case "fSet_edit1" : myElement = fSet_edit1;break;
             case "fSet_edit2" : myElement = fSet_edit2;break;
             case "edit_required" : myElement =edit_required; break;
