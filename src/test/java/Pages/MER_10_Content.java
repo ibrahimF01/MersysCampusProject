@@ -1,6 +1,6 @@
 package Pages;
 
-public class MER_10_Content extends Parent implements IMethodContent{
+public class MER_10_Content extends Parent{
 
 
     @Override
