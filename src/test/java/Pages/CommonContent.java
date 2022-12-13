@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class CommonContent extends Parent{
     public CommonContent() {
         PageFactory.initElements(GWD.getDriver(),this);
@@ -40,17 +42,20 @@ public class CommonContent extends Parent{
     @FindBy(xpath="//span[text()='Field Settings']")
     private WebElement fieldSettings;
 
-    @FindBy(xpath="(//mat-option/span[@class='mat-option-text'])[1]")
+    @FindBy(xpath="(div[class='mat-select-arrow ng-tns-c96-61']")
     private WebElement fSet_exam; // no list returned!!!
 
-    @FindBy(xpath="(//mat-option/span[@class='mat-option-text'])[2]")
+    @FindBy(xpath="(//div[@role='listbox']//mat-option[@role='option']/span)[2]")
     private WebElement fSet_student;
 
-    @FindBy(xpath="(//mat-option/span[@class='mat-option-text'])[3]")
+    @FindBy(xpath="(//div[@role='listbox']//mat-option[@role='option']/span)[3]")
     private WebElement fSet_employee;
 
     @FindBy(xpath="(//ms-edit-button//button)[1]")
     private WebElement fSet_edit1;
+
+    @FindBy(xpath="(//ms-edit-button//button)[2]")
+    private WebElement fSet_edit2;
 
     @FindBy(xpath="//ms-integer-field[@formcontrolname='order']/input")
     private WebElement edit_order;
@@ -138,6 +143,8 @@ public class CommonContent extends Parent{
             case "searchInput" : myElement =searchInput; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
+            case "edit_order" : myElement =edit_order; break;
+            case "edit_arrayValues" : myElement =edit_arrayValues; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -163,6 +170,14 @@ public class CommonContent extends Parent{
             case "entranceExamsOne" : myElement =entranceExamsOne; break;
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
+            case "fieldSettings" : myElement =fieldSettings; break;
+            case "fSet_exam" : myElement =fSet_exam; break;
+            case "fSet_student" : myElement =fSet_student; break;
+            case "fSet_edit1" : myElement = fSet_edit1;break;
+            case "fSet_edit2" : myElement = fSet_edit2;break;
+            case "edit_required" : myElement =edit_required; break;
+            case "edit_enabled" : myElement =edit_enabled; break;
+            case "edit_array" : myElement =edit_array; break;
 
         }
 
