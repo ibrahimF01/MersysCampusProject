@@ -19,8 +19,8 @@ public class FieldSettings {
         cc.findAndClick("parameters");
         cc.findAndClick("fieldSettings");
     }
-    @When("Choose an Entity Type and click Edit button")
-    public void chooseAnEntityTypeAndClickEditButton() {
+    @When("Choose Student as Entity and click Edit button")
+    public void chooseStudentAsEntityAndClickEditButton() {
         cc.findAndClick("fSet_entityType");
         cc.findAndClick("fSet_student");
         cc.findAndClick("fSet_edit1");
@@ -40,6 +40,13 @@ public class FieldSettings {
     @Then("User should edit all successfully")
     public void userShouldEditAllSuccessfully() {
         cc.findAndContainsText("successMessage","successfully updated");
+    }
+
+    @When("Choose Employee as Entity and click Edit button")
+    public void chooseEmployeeAsEntityAndClickEditButton() {
+        cc.findAndClick("fSet_entityType");
+        cc.findAndClick("fSet_employee");
+        cc.findAndClick("fSet_edit1");
     }
 }
 
