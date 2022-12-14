@@ -13,19 +13,20 @@ import java.util.List;
 
 public class FieldSettings {
     CommonContent cc = new CommonContent();
+
     @Given("Navigate to Field Setting page")
     public void navigateToFieldSettingPage() {
         cc.findAndClick("setupOne");
         cc.findAndClick("parameters");
         cc.findAndClick("fieldSettings");
     }
-    @When("Choose Student as Entity and click Edit button")
-    public void chooseStudentAsEntityAndClickEditButton() {
-        cc.findAndClick("fSet_entityType");
-        cc.findAndClick("fSet_student");
-        cc.findAndClick("fSet_edit1");
 
-        }
+    @When("Choose {string} Type and click Edit button")
+    public void chooseTypeAndClickEditButton(String entity) {
+        cc.findAndClick("fSet_entityType");
+        cc.findAndClick(entity);
+        cc.findAndClick("fSet_edit1");
+    }
 
     @And("Set Order value and activate Required Enabled and Array options")
     public void setOrderValueAndActivateRequiredEnabledAndArrayOptions() {
@@ -39,17 +40,8 @@ public class FieldSettings {
 
     @Then("User should edit all successfully")
     public void userShouldEditAllSuccessfully() {
-        cc.findAndContainsText("successMessage","successfully updated");
+        cc.findAndContainsText("successMessage", "successfully updated");
     }
 
-    @When("Choose Employee as Entity and click Edit button")
-    public void chooseEmployeeAsEntityAndClickEditButton() {
-        cc.findAndClick("fSet_entityType");
-        cc.findAndClick("fSet_employee");
-        cc.findAndClick("fSet_edit1");
-    }
+
 }
-
-//        List<WebElement> edit = GWD.getDriver().findElements(By.xpath("ms-edit-button//button"));
-//        for (int i = 0; i < edit.size(); i++)
-//           cc.findAndClick("edit.get(i)");

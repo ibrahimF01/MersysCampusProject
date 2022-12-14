@@ -57,6 +57,9 @@ public class CommonContent extends Parent{
     @FindBy(xpath="(//ms-edit-button//button)[2]")
     private WebElement fSet_edit2;
 
+    @FindBy(xpath="//ms-edit-button//button")
+    private List<WebElement> fSet_EditList;
+
     @FindBy(xpath="//ms-integer-field[@formcontrolname='order']/input")
     private WebElement edit_order;
 
@@ -176,6 +179,7 @@ public class CommonContent extends Parent{
             case "fSet_employee" : myElement =fSet_employee; break;
             case "fSet_edit1" : myElement = fSet_edit1;break;
             case "fSet_edit2" : myElement = fSet_edit2;break;
+            case "fSet_EditList" : myElement = (WebElement) fSet_EditList;break;
             case "edit_required" : myElement =edit_required; break;
             case "edit_enabled" : myElement =edit_enabled; break;
             case "edit_array" : myElement =edit_array; break;
