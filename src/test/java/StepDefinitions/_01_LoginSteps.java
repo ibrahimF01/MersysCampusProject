@@ -22,11 +22,12 @@ public class _01_LoginSteps {
         cc.findAndSend("username",ConstantsClass.UserName);
         cc.findAndSend("password",ConstantsClass.Password);
         cc.findAndClick("loginButton");
+        cc.findAndClick("acceptCookies");
     }
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
         cc.findAndContainsText("dashboard","Dashboard");
-        cc.findAndClick("acceptCookies");
+        //cc.findAndClick("acceptCookies");
     }
 }
