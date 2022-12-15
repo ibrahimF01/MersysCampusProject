@@ -17,21 +17,24 @@ public class _11_FieldSettings {
 
 
     @Given("Navigate to Field Setting page")
-    public void navigateToFieldSettingPage() throws InterruptedException {
+    public void navigateToFieldSettingPage() {
         cc.findAndClick("setupOne");
         cc.findAndClick("parameters");
         cc.findAndClick("fieldSettings");
     }
 
-    @When("Choose {string} Type and click Edit button")
-    public void chooseTypeAndClickEditButton(String entity) {
+    @When("Choose {string} Type, activate two toggle bars and click Edit button")
+    public void chooseTypeActivateTwoToggleBarsAndClickEditButton(String entity) {
         mer11.findAndClick("fSet_entityType");
         mer11.findAndClick(entity);
+        mer11.findAndClick("fSet_required");
+        mer11.findAndClick("fSet_enabled");
         mer11.findAndClick("fSet_edit1");
+
     }
 
-    @And("Set Order value and activate Required Enabled and Array options")
-    public void setOrderValueAndActivateRequiredEnabledAndArrayOptions() {
+    @And("Set Order value, disable the toggle bars, activate the next toggle bar and assign a value")
+    public void setOrderValueDisableTheToggleBarsActivateTheNextToggleBarAndAssignAValue() {
         mer11.findAndSend("edit_order", "1");
         mer11.findAndClick("edit_required");
         mer11.findAndClick("edit_enabled");

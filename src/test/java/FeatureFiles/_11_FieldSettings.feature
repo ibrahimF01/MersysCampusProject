@@ -9,8 +9,8 @@ Feature: Field Settings Functionality
   Scenario Outline: Editing All Field Settings
 
     Given Navigate to Field Setting page
-    When Choose "<Entity>" Type and click Edit button
-    And Set Order value and activate Required Enabled and Array options
+    When Choose "<Entity>" Type, activate two toggle bars and click Edit button
+    And Set Order value, disable the toggle bars, activate the next toggle bar and assign a value
     Then User should edit all successfully
 
     Examples:

@@ -21,6 +21,12 @@ public class MER_11_Content extends Parent{
     @FindBy(xpath="(//mat-option[@role='option']//span[@class='mat-option-text'])[3]")
     private WebElement fSet_employee;
 
+    @FindBy (xpath = "(//span[@class='mat-slide-toggle-bar mat-slide-toggle-bar-no-side-margin'])[1]")
+    private WebElement fSet_required;
+
+    @FindBy (xpath = "(//span[@class='mat-slide-toggle-bar mat-slide-toggle-bar-no-side-margin'])[2]")
+    private WebElement fSet_enabled;
+
     @FindBy(xpath="(//ms-edit-button//button)[1]")
     private WebElement fSet_edit1;
 
@@ -59,6 +65,8 @@ public class MER_11_Content extends Parent{
             case "fSet_entityType" : myElement =fSet_entityType; break;
             case "fSet_student" : myElement =fSet_student; break;
             case "fSet_employee" : myElement =fSet_employee; break;
+            case "fSet_required" : myElement =fSet_required; break;
+            case "fSet_enabled" : myElement =fSet_enabled; break;
             case "fSet_edit1" : myElement = fSet_edit1;break;
             case "fSet_EditList" : myElement = fSet_EditList.get(cnt++);break;
             case "edit_required" : myElement =edit_required; break;
