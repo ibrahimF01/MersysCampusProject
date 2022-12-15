@@ -134,8 +134,9 @@ public class CommonContent extends Parent{
     private WebElement acceptCookies;
 
 
-    WebElement myElement;
-    public void findAndSend(String strElement, String value){
+
+    @Override
+   public void findAndSend(String strElement, String value){
         switch (strElement)
         {
             case "username" : myElement =username; break;
@@ -152,7 +153,7 @@ public class CommonContent extends Parent{
 
         sendKeysFunction(myElement, value);
     }
-
+    @Override
     public void findAndClick(String strElement){
         switch (strElement)
         {
@@ -188,7 +189,7 @@ public class CommonContent extends Parent{
 
         clickFunction(myElement);
     }
-
+    @Override
     public void findAndContainsText(String strElement, String text){
         switch (strElement)
         {
@@ -200,7 +201,7 @@ public class CommonContent extends Parent{
         verifyContainsText(myElement,text);
     }
 
-
+    @Override
     public void SearchAndDelete(String searchText){
         findAndSend("searchInput", searchText);
         findAndClick("searchButton");
