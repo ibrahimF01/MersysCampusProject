@@ -31,12 +31,14 @@ public abstract class Parent implements IMethodContent{
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
+
     public void clickFunction(WebElement element)
     {
         waitUntilClickable(element); // tıklanabilir olana kadar bekle
         scrollToElement(element); // elemente scroll yap
         element.click(); // click yap
     }
+
 
     public void waitUntilClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));

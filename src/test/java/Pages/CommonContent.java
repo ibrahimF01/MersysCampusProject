@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class CommonContent extends Parent{
     public CommonContent() {
         PageFactory.initElements(GWD.getDriver(),this);
@@ -36,6 +38,9 @@ public class CommonContent extends Parent{
 
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
+
+    @FindBy(xpath="//span[text()='Field Settings']")
+    private WebElement fieldSettings;
 
     //DialogContent
     @FindBy(id="mat-input-0")
@@ -134,7 +139,7 @@ public class CommonContent extends Parent{
             case "entranceExamsOne" : myElement =entranceExamsOne; break;
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
-
+            case "fieldSettings" : myElement =fieldSettings; break;
         }
 
         clickFunction(myElement);
@@ -163,3 +168,4 @@ public class CommonContent extends Parent{
     }
 
 }
+

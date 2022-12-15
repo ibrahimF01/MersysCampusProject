@@ -15,7 +15,7 @@ import org.testng.annotations.Parameters;
 )
 public class _08_TestRunnerParallel_MasterReport extends AbstractTestNGCucumberTests {
 
-    @BeforeClass(alwaysRun = true) // bazı java versiyon hatalırı için
+    @BeforeClass(alwaysRun = true) // bazı java versiyon hataları için
     @Parameters("browser")
     public void beforeClass(String browser)
     {
