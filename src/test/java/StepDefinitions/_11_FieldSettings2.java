@@ -2,10 +2,11 @@ package StepDefinitions;
 
 import Pages.CommonContent;
 import Pages.MER_11_Content;
-import Utilities.GWD;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
@@ -13,22 +14,42 @@ public class _11_FieldSettings2 {
     CommonContent cc = new CommonContent();
     MER_11_Content mer11 = new MER_11_Content();
 
-    @When("Choose Employee as Entity and click EditList button")
-    public void chooseEmployeeAsEntityAndClickEditListButton() {
-        mer11.findAndClick("fSet_entityType");
-        mer11.findAndClick("fSet_employee");
+    @Given("Navigate to Field Setting menu")
+    public void navigateToFieldSettingMenu(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for (String s : listElement) cc.findAndClick(s);
+    }
+    @When("Select Entity Type, activate the following toggle bars and click Edit button")
+    public void selectEntityTypeActivateTheFollowingToggleBarsAndClickEditButton(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for (String s : listElement) mer11.findAndClick(s);
+    }
 
-            mer11.findAndClick("fSet_EditList");
-            mer11.findAndClick("edit_array");
-            mer11.findAndClick("edit_required");
-            mer11.findAndSend("edit_arrayValues", "700");
-            mer11.findAndClick("saveButton");
-            mer11.findAndClick("edit_enabled");
+    @And("Assign values for Order and Array fields")
+    public void assignValuesForOrderAndArrayFields(DataTable elements) {
 
-            mer11.findAndSend("edit_order", "1");
-            cc.findAndContainsText("successMessage", "successfully updated");
+        List<List<String>> listElement = elements.asLists(String.class);
+        for (List<String> strings : listElement) mer11.findAndSend(strings.get(0), strings.get(1));
+    }
 
+    @And("Disable the two toggle bars, enable the last toggle bar")
+    public void disableTheTwoToggleBarsEnableTheLastToggleBar(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for (String s : listElement) mer11.findAndClick(s);
+    }
 
+    @And("Click Save button")
+    public void clickSaveButton(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for (String s : listElement) cc.findAndClick(s);
+    }
 
+    @Then("Success message should appear on the screen")
+    public void successMessageShouldAppearOnTheScreen(DataTable elements) {
+
+        List<List<String>> listElement = elements.asLists(String.class);
+        for (List<String> strings : listElement) cc.findAndContainsText(strings.get(0), strings.get(1));
     }
 }
+
+
