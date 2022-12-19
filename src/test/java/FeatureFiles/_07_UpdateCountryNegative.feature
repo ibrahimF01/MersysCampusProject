@@ -1,5 +1,4 @@
 Feature: Add Country
-
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
