@@ -99,6 +99,8 @@ public class CommonContent extends Parent{
 
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
+    @FindBy(xpath = "//span[text()='Fields']")
+    private WebElement Fields;
 
 
 
@@ -140,6 +142,7 @@ public class CommonContent extends Parent{
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "fieldSettings" : myElement =fieldSettings; break;
+            case "Fields" : myElement =Fields; break;
         }
 
         clickFunction(myElement);

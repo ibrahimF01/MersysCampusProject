@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MER_07_Content extends Parent{
+public class MER_07_Content extends Parent {
 
-    public MER_07_Content {
+    public MER_07_Content() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -20,18 +20,35 @@ public class MER_07_Content extends Parent{
     @FindBy(xpath = "//span[text()='Parameters'][1]")
     private WebElement clickParameters;
 
+    @Override
     public void findAndSend(String strElement, String value) {
         switch (strElement) {
 
             case "writeName":
-                myElement = writeName;
+//                myElement = writeName;
                 break;
             case "rename":
-                myElement = rename;
+//                myElement = rename;
                 break;
 //            case "writeNameRenameit":myElement=writeNameRenameit;break;
 
         }
 
         sendKeysFunction(myElement, value);
+    }
+
+    @Override
+    public void findAndClick(String strElement) {
+
+    }
+
+    @Override
+    public void findAndContainsText(String strElement, String text) {
+
+    }
+
+    @Override
+    public void SearchAndDelete(String searchText) {
+
+    }
 }
