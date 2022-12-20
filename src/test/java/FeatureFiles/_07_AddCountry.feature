@@ -1,4 +1,5 @@
 Feature: Add Country
+
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
@@ -24,6 +25,6 @@ Feature: Add Country
           | COUNTRY-T20  |
           | C-001        |
 
-    And Confirm The Country Informations
+    Then Confirm The Country Informations
           | COUNTRY-T20  |
           | C-001        |
