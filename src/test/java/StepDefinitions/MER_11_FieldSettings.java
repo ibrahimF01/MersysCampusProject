@@ -38,6 +38,8 @@ public class MER_11_FieldSettings {
         mer11.findAndClick("edit_enabled");
         mer11.findAndClick("edit_array");
         mer11.findAndSend("edit_arrayValues", "100");
+        mer11.findAndClick("edit_array");
+        mer11.findAndSend("edit_order", "0");
         cc.findAndClick("saveButton");
     }
 

@@ -6,6 +6,7 @@ Feature: Field Settings Functionality
     When Enter username and password and click login button
     Then User should login successfully
 
+    @Regression_HY
   Scenario Outline: Editing All Field Settings
 
     Given Navigate to Field Setting page
