@@ -34,7 +34,7 @@ public class MER_07_Content extends Parent {
     private WebElement inputCode;
 
     @FindBy(xpath = "//ms-search-button//span[text()='Search']")
-    private WebElement clickSearch;
+    private WebElement clickSearchButton;
 
     @FindBy(xpath = "//ms-add-button//button")
     private WebElement clickAddButton;
@@ -50,6 +50,11 @@ public class MER_07_Content extends Parent {
 
     @FindBy(xpath = "//ms-save-button//span[text()='Save']")
     private WebElement clickSaveButton;
+
+    @FindBy(xpath = "//ms-delete-button//span[text()='Delete']")
+    private WebElement clickDeleteButton;
+
+
 
     public void findAndSend(String strElement, String value) {
 
@@ -72,10 +77,11 @@ public class MER_07_Content extends Parent {
             case "clickSetup": myElement = clickSetup; break;
             case "clickParameters": myElement = clickParameters; break;
             case "clickCountries": myElement = clickCountries; break;
-            case "clickSearch": myElement = clickSearch; break;
+            case "clickSearchButton": myElement = clickSearchButton; break;
             case "clickAddButton": myElement = clickAddButton; break;
             case "clickFirstFound": myElement = clickFirstFound; break;
             case "clickSaveButton": myElement = clickSaveButton; break;
+            case "clickDeleteButton": myElement = clickDeleteButton; break;
 
         }
 
