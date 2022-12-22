@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
 
 @CucumberOptions(
         tags = "@Regression",
-        features = {"src/test/java/FeatureFiles/"},
+        features = {"src/test/java/FeatureFiles/_01_Login.feature"},
         glue = {"StepDefinitions"}
 )
 @Listeners({ExtentITestListenerClassAdapter.class})
@@ -17,10 +17,20 @@ public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public static void writeExtentReport() {
-        ExtentService.getInstance().setSystemInfo("User Name", "Huseyin YILMAZ");
-        ExtentService.getInstance().setSystemInfo("Application Name", "Campus");
+        ExtentService.getInstance().setSystemInfo("Product Owner", "Ahmet Demir");
+        ExtentService.getInstance().setSystemInfo("Scrum Master", "Serkan Bey");
+        ExtentService.getInstance().setSystemInfo("User Name", "İbrahim Figen");
+        ExtentService.getInstance().setSystemInfo("User Name", "Hüseyin Yılmaz");
+        ExtentService.getInstance().setSystemInfo("User Name", "Orçun İlgen");
+        ExtentService.getInstance().setSystemInfo("User Name", "Zekeriya Demirel");
+        ExtentService.getInstance().setSystemInfo("User Name", "Ömer Avcı");
+        ExtentService.getInstance().setSystemInfo("User Name", "Ahmet Mutlu");
+        ExtentService.getInstance().setSystemInfo("User Name", "Erkan Kurtağa");
+        ExtentService.getInstance().setSystemInfo("User Name", "Şükrü Kılıç");
+        ExtentService.getInstance().setSystemInfo("User Name", "Pelin Çimen");
+        ExtentService.getInstance().setSystemInfo("Application Name", "Your Website");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name").toString());
         ExtentService.getInstance().setSystemInfo("Department", "QA");
-        ExtentService.getInstance().setSystemInfo("Ek Satır", "Açıklama");
+        ExtentService.getInstance().setSystemInfo("Ability", "Bug Hunter");
     }
 }
