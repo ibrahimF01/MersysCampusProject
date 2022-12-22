@@ -9,7 +9,7 @@ import io.cucumber.java.en.*;
 import java.util.List;
 
 
-public class MER_10_Steps {
+public class MER_10_Fields {
     CommonContent cc=new CommonContent();
     MER_10_Content mc=new MER_10_Content();
 

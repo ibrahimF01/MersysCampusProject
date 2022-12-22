@@ -8,7 +8,7 @@ Feature: Fields Functionality
       | setupOne   |
       | parameters |
       | Fields     |
-
+  @Regression @SmokeTest
   Scenario:Adding Fields
     And Click on the Plus Button
       | addButton1 |
@@ -21,7 +21,7 @@ Feature: Fields Functionality
       | saveButton |
     Then Success message should be displayed
       | addAssert | successfully created |
-
+  @Regression
   Scenario:Adding Fields - Negative
     And Click on the Plus Button
       | addButton1 |
@@ -32,7 +32,7 @@ Feature: Fields Functionality
       | saveButton |
     Then Success message should be displayed
       | addNegativeAssert | already exists |
-
+  @Regression
   Scenario:Editing Fields
     And Enter name in search field
       | searchInput | Jhon Wick |
@@ -47,7 +47,7 @@ Feature: Fields Functionality
       | saveButton |
     Then Success message should be displayed
       | editAssert | successfully updated |
-
+  @Regression
   Scenario:Deleting Fields
     And Enter name in search field
       | searchInput | Baba Yaga |
@@ -59,7 +59,7 @@ Feature: Fields Functionality
       | deleteAccept |
     Then Success message should be displayed
       | noDataAssert | no data to display |
-
+  @Regression
   Scenario:Deleting Fields - Negative
     And Enter name in search field
       | searchInput | Baba Yaga |
