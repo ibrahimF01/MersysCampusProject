@@ -7,11 +7,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class _11_FieldSettings {
+public class MER_11_FieldSettings {
     CommonContent cc = new CommonContent();
     MER_11_Content mer11 = new MER_11_Content();
 
@@ -21,6 +18,7 @@ public class _11_FieldSettings {
         cc.findAndClick("setupOne");
         cc.findAndClick("parameters");
         cc.findAndClick("fieldSettings");
+        GWD.Bekle(1);
     }
 
     @When("Choose {string} Type, activate two toggle bars and click Edit button")
@@ -39,7 +37,9 @@ public class _11_FieldSettings {
         mer11.findAndClick("edit_required");
         mer11.findAndClick("edit_enabled");
         mer11.findAndClick("edit_array");
-        mer11.findAndSend("edit_arrayValues", "700");
+        mer11.findAndSend("edit_arrayValues", "100");
+        mer11.findAndClick("edit_array");
+        mer11.findAndSend("edit_order", "0");
         cc.findAndClick("saveButton");
     }
 
