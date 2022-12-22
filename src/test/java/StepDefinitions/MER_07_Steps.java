@@ -52,10 +52,7 @@ public class MER_07_Steps {
         List<String> listElement = elements.asList(String.class);
         mer7.findAndContainsText("inputFormName", listElement.get(0));
         mer7.findAndContainsText("inputFormCode", listElement.get(1));
-    }
-
-    @Then("Confirm The Error Message is Available")
-    public void confirmTheErrorMessageIsAvailable() {
+        mer7.findAndClick("ListNameRow");
     }
 
     @And("Click On The First Country Name Found")
@@ -69,7 +66,10 @@ public class MER_07_Steps {
     }
 
     @And("Check The Country Informations to Delete")
-    public void checkTheCountryInformationsToDelete() {
+    public void checkTheCountryInformationsToDelete(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        mer7.findAndContainsText("inputFormName", listElement.get(0));
+        mer7.findAndContainsText("inputFormCode", listElement.get(1));
     }
 
     @And("Click The Delete Button On CheckBox")
@@ -80,5 +80,14 @@ public class MER_07_Steps {
     public void confirmTheCountryInformationsIsNotAvailable() {
     }
 
+    @Then("Confirm The Message")
+    public void confirmTheMessage(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        mer7.findAndContainsText(listElement.get(0), listElement.get(1));
+    }
 
+    @And("Click On The FormDelete Button")
+    public void clickOnTheFormDeleteButton() {
+        mer7.findAndClick("clickOnTheFormDeleteButton");
+    }
 }

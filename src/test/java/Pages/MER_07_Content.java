@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.PageFactory;
 
 import java.time.Duration;
+import java.util.List;
 
 public class MER_07_Content extends Parent {
 
@@ -39,7 +40,7 @@ public class MER_07_Content extends Parent {
     @FindBy(xpath = "//ms-add-button//button")
     private WebElement clickAddButton;
 
-    @FindBy(xpath = "(//tbody[@role='rowgroup']//tr)[1]")
+    @FindBy(xpath = "(//ms-edit-button//button)[1]")    //(((//tbody[@role='rowgroup']//tr)[1])//following::td)[1]")
     private WebElement clickFirstFound;
 
     @FindBy(xpath = "(//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input)[2]")
@@ -51,9 +52,27 @@ public class MER_07_Content extends Parent {
     @FindBy(xpath = "//ms-save-button//span[text()='Save']")
     private WebElement clickSaveButton;
 
-    @FindBy(xpath = "//ms-delete-button//span[text()='Delete']")
+    @FindBy(xpath = "(//ms-delete-button//span[text()='Delete'])[1]")
     private WebElement clickDeleteButton;
 
+    @FindBy(xpath = "(//button//span[text()=' Delete ']")
+    private WebElement clickFormDeleteButton;
+
+    @FindBy(xpath = "//dynamic-view/div[contains(text(), 'successfully')]")
+    private WebElement SuccessMessage;
+
+    @FindBy(xpath = "//dynamic-view/div[contains(text(), 'already exists')]")
+    private WebElement ExistMessage;
+
+
+//    @FindBy(xpath = "//tbody/tr[@role='row']")
+//    public List<WebElement> ListNameRow;
+
+//    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input]")
+//    private WebElement ListNameLine;
+//
+//    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input]")
+//    private List<WebElement> ListCodeLine;
 
 
     public void findAndSend(String strElement, String value) {
@@ -82,6 +101,7 @@ public class MER_07_Content extends Parent {
             case "clickFirstFound": myElement = clickFirstFound; break;
             case "clickSaveButton": myElement = clickSaveButton; break;
             case "clickDeleteButton": myElement = clickDeleteButton; break;
+            case "clickFormDeleteButton": myElement = clickFormDeleteButton; break;
 
         }
 
@@ -92,9 +112,11 @@ public class MER_07_Content extends Parent {
     public void findAndContainsText(String strElement, String text) {
 
         switch (strElement)  {
-//            case "dashboard" : myElement =dashboard; break;
-//            case "successMessage" : myElement =successMessage; break;
-//            case "alreadyExist" : myElement =alreadyExist; break;
+            case "SuccessMessage": myElement = SuccessMessage; break;
+            case "ExistMessage": myElement = ExistMessage; break;
+            case "inputFormName": myElement = inputFormName; break;
+            case "inputFormCode": myElement = inputFormCode; break;
+
         }
         verifyContainsText(myElement,text);
     }
