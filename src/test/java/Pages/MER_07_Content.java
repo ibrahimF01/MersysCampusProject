@@ -52,6 +52,7 @@ public class MER_07_Content extends Parent {
     @FindBy(xpath = "//ms-save-button//span[text()='Save']")
     private WebElement clickSaveButton;
 
+
     @FindBy(xpath = "//span[contains(text(),'Save')]")
     private WebElement clickFormSaveButton;
 
