@@ -42,6 +42,9 @@ public class CommonContent extends Parent{
     @FindBy(xpath="//span[text()='Field Settings']")
     private WebElement fieldSettings;
 
+    @FindBy(xpath="//span[text()='Discounts']")
+    private WebElement discounts;
+
     //DialogContent
     @FindBy(id="mat-input-0")
     private WebElement username;
@@ -84,6 +87,9 @@ public class CommonContent extends Parent{
 
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement searchButton;
+
+    @FindBy(xpath = "//ms-edit-button//button")
+    private WebElement editButton;
 
     @FindBy(xpath = "//ms-delete-button//button")
     private WebElement deleteButton;
@@ -129,6 +135,7 @@ public class CommonContent extends Parent{
             case "saveButton" : myElement =saveButton; break;
             case "closeDialog" : myElement =closeDialog; break;
             case "searchButton" : myElement =searchButton; break;
+            case "editButton" : myElement =editButton; break;
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
@@ -143,6 +150,7 @@ public class CommonContent extends Parent{
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "fieldSettings" : myElement =fieldSettings; break;
             case "Fields" : myElement =Fields; break;
+            case "discounts" : myElement =discounts; break;
         }
 
         clickFunction(myElement);
