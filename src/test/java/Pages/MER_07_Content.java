@@ -52,10 +52,13 @@ public class MER_07_Content extends Parent {
     @FindBy(xpath = "//ms-save-button//span[text()='Save']")
     private WebElement clickSaveButton;
 
-    @FindBy(xpath = "(//ms-delete-button//span[text()='Delete'])[1]")
+    @FindBy(xpath = "//span[contains(text(),'Save')]")
+    private WebElement clickFormSaveButton;
+
+    @FindBy(xpath = "(//ms-delete-button//button)[1]")  //tbody//td[contains(text(),'COUNTRY-T20-NEW')]")    // div[fxlayoutalign='center center'][class='control-full']")  //
     private WebElement clickDeleteButton;
 
-    @FindBy(xpath = "(//button//span[text()=' Delete ']")
+    @FindBy(xpath = "//button[@type='submit']//span[@class='mat-button-wrapper']")
     private WebElement clickFormDeleteButton;
 
     @FindBy(xpath = "//dynamic-view/div[contains(text(), 'successfully')]")
@@ -102,6 +105,7 @@ public class MER_07_Content extends Parent {
             case "clickSaveButton": myElement = clickSaveButton; break;
             case "clickDeleteButton": myElement = clickDeleteButton; break;
             case "clickFormDeleteButton": myElement = clickFormDeleteButton; break;
+            case "clickFormSaveButton": myElement = clickFormSaveButton; break;
 
         }
 
@@ -125,7 +129,7 @@ public class MER_07_Content extends Parent {
     public void SearchAndDelete(String searchText){
 
         //scrollUp()
-        findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
+        findAndSend("clickDeleteButton", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
         //waitUntilLoading();
