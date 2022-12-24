@@ -52,14 +52,6 @@ public class MER_07_Steps {
         mer7.findAndClick("clickSaveButton");
     }
 
-    @Then("Confirm The Country Informations")
-    public void confirmTheCountryInformations(DataTable elements) {
-        List<String> listElement = elements.asList(String.class);
-        mer7.findAndContainsText("inputFormName", listElement.get(0));
-        mer7.findAndContainsText("inputFormCode", listElement.get(1));
-        mer7.findAndClick("ListNameRow");
-    }
-
     @And("Click On The First Country Name Found")
     public void clickOnTheFirstCountryNameFound() {
        mer7.findAndClick("clickFirstFound");
@@ -67,22 +59,9 @@ public class MER_07_Steps {
 
     @And("Click The Delete Button")
     public void clickTheDeleteButton() {
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
         mer7.findAndClick("clickDeleteButton");
-    }
-
-    @And("Check The Country Informations to Delete")
-    public void checkTheCountryInformationsToDelete(DataTable elements) {
-        List<String> listElement = elements.asList(String.class);
-        mer7.findAndContainsText("inputFormName", listElement.get(0));
-        mer7.findAndContainsText("inputFormCode", listElement.get(1));
-    }
-
-    @And("Click The Delete Button On CheckBox")
-    public void clickTheDeleteButtonOnCheckBox() {
-    }
-
-    @Then("Confirm The Country Informations is Not Available")
-    public void confirmTheCountryInformationsIsNotAvailable() {
     }
 
     @Then("Confirm The Message")
@@ -93,6 +72,6 @@ public class MER_07_Steps {
 
     @And("Click On The FormDelete Button")
     public void clickOnTheFormDeleteButton() {
-        mer7.findAndClick("clickOnTheFormDeleteButton");
+        mer7.findAndClick("clickFormDeleteButton");
     }
 }
