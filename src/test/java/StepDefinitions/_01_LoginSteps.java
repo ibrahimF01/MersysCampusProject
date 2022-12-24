@@ -11,8 +11,8 @@ public class _01_LoginSteps {
     CommonContent cc=new CommonContent();
 
 
-    @Given("Navigate to basqar")
-    public void navigateToBasqar() {
+    @Given("Navigate to Campus")
+    public void navigateToCampus() {
         GWD.getDriver().get(ConstantsClass.AppUrl);
         GWD.getDriver().manage().window().maximize();
     }

@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.CommonContent;
 import Pages.MER_11_Content;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -10,7 +11,7 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
-public class _11_FieldSettings2 {
+public class MER_11_FieldSettings2 {
     CommonContent cc = new CommonContent();
     MER_11_Content mer11 = new MER_11_Content();
 
@@ -18,6 +19,7 @@ public class _11_FieldSettings2 {
     public void navigateToFieldSettingMenu(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (String s : listElement) cc.findAndClick(s);
+        GWD.Bekle(1);
     }
     @When("Select Entity Type, activate the following toggle bars and click Edit button")
     public void selectEntityTypeActivateTheFollowingToggleBarsAndClickEditButton(DataTable elements) {
