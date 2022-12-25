@@ -51,6 +51,24 @@ Feature: Countries Settings Functionality
       | SuccessMessage  |
       | successfully    |
 
+  Scenario: Update a Country Existent
+    Given Navigate to Countries Setting Menu
+      | clickSetup       |
+      | clickParameters  |
+      | clickCountries   |
+    When Input The Country Informations
+      | COUNTRY-T20-NEW  |
+      | C-001-NEW        |
+    And Click The Search Button
+    And Click On The First Country Name Found
+    And InputForm The Country Informations
+      | TURKEY           |
+      | 001              |
+    And Click The Save Button
+    Then Confirm The Message
+      | ExistMessage    |
+      | already exists  |
+
   Scenario: Delete a Country
     Given Navigate to Countries Setting Menu
       | clickSetup       |
