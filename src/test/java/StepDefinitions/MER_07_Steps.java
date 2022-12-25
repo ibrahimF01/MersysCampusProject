@@ -54,7 +54,9 @@ public class MER_07_Steps {
 
     @And("Click On The First Country Name Found")
     public void clickOnTheFirstCountryNameFound() {
-       mer7.findAndClick("clickFirstFound");
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
+        mer7.findAndClick("clickFirstFound");
     }
 
     @And("Click The Delete Button")
