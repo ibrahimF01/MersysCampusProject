@@ -3,13 +3,13 @@ Feature: Countries Settings Functionality
   Background:
     Given Navigate to Campus
     When Enter username and password and click login button
-    And User should login successfully
-    Then Navigate to Countries Setting Menu
+    Then User should login successfully
+
+  Scenario: Add a Country
+    Given Navigate to Countries Setting Menu
       | clickSetup       |
       | clickParameters  |
       | clickCountries   |
-
-  Scenario: Add a Country
     When Click The Add Button
     And InputForm The Country Informations
           | COUNTRY-T20 |
@@ -20,6 +20,10 @@ Feature: Countries Settings Functionality
           | successfully    |
 
   Scenario: Add a Country Existent
+    Given Navigate to Countries Setting Menu
+      | clickSetup       |
+      | clickParameters  |
+      | clickCountries   |
     When Click The Add Button
     And InputForm The Country Informations
           | COUNTRY-T20 |
@@ -30,6 +34,10 @@ Feature: Countries Settings Functionality
           | already exists  |
 
   Scenario: Update a Country
+    Given Navigate to Countries Setting Menu
+      | clickSetup       |
+      | clickParameters  |
+      | clickCountries   |
     When Input The Country Informations
       | COUNTRY-T20  |
       | C-001        |
@@ -44,6 +52,10 @@ Feature: Countries Settings Functionality
       | successfully    |
 
   Scenario: Delete a Country
+    Given Navigate to Countries Setting Menu
+      | clickSetup       |
+      | clickParameters  |
+      | clickCountries   |
     When Input The Country Informations
       | COUNTRY-T20-NEW  |
       | C-001-NEW        |
