@@ -20,7 +20,7 @@ Feature: Add, Edit And Delete Bank Accounts Functionality
     And Click on the element in the Dialog
       | saveButton |
     Then Success message should be displayed
-
+      | addAssert | successfully created |
   Scenario: Editing The Bank Account
     And User Edit item from Dialog
       | searchName | ENPARA |
@@ -28,8 +28,9 @@ Feature: Add, Edit And Delete Bank Accounts Functionality
     And Click on the element in the Dialog
       | saveButton |
     Then Success message should be displayed
-
+      | editAssert | successfully updated |
   Scenario: Deleting The Bank Account
     And User Delete item from Dialog
       | searchName | ONPARA |
     Then Success message should be displayed
+      | noDataAssert | no data to display |

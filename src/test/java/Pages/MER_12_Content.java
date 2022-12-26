@@ -36,6 +36,18 @@ public class MER_12_Content extends Parent {
     @FindBy(xpath="//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     private WebElement searchName;
 
+    @FindBy(xpath="//div[contains(text(),'successfully created')]")
+    private WebElement addAssert;
+
+    @FindBy(xpath="//div[text()='Field successfully updated']")
+    private WebElement editAssert;
+
+    @FindBy(css="hot-toast-container dynamic-view>div")
+    private WebElement deleteAssert;
+
+    @FindBy(xpath="//div[text()=' There is no data to display ']")
+    private WebElement noDataAssert;
+
     CommonContent common = new CommonContent();
 
     @Override
@@ -84,7 +96,13 @@ public class MER_12_Content extends Parent {
     @Override
     public void findAndContainsText(String strElement, String text) {
         myElement = null;
-        switch(strElement){}
+        switch(strElement){
+            case "noDataAssert" : myElement =noDataAssert; break;
+            case "addAssert" : myElement =addAssert; break;
+            case "editAssert" : myElement =editAssert; break;
+            case "deleteAssert" : myElement =deleteAssert; break;
+
+        }
 
         if(myElement == null){
             common.findAndContainsText(strElement,text);
