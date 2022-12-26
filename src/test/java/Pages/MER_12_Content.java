@@ -39,14 +39,29 @@ public class MER_12_Content extends Parent {
     @FindBy(xpath="//div[contains(text(),'successfully created')]")
     private WebElement addAssert;
 
-    @FindBy(xpath="//div[text()='Field successfully updated']")
+    @FindBy(xpath="//div[contains(text(),'successfully updated')]")
     private WebElement editAssert;
 
-    @FindBy(css="hot-toast-container dynamic-view>div")
-    private WebElement deleteAssert;
+    @FindBy(xpath="//div[contains(text(),'successfully')]")
+    private WebElement successAssert;
+
+    @FindBy(xpath="//div[contains(text(),'already exists')]")
+    private WebElement alreadyExistsAssert;
+
+    @FindBy(xpath="//div[contains(text(),'already')]")
+    private WebElement alreadyAssert;
 
     @FindBy(xpath="//div[text()=' There is no data to display ']")
     private WebElement noDataAssert;
+
+    @FindBy(xpath = "//span[contains(text(),'Delete')]")
+    private WebElement deleteAcceptBtn;
+
+    @FindBy(xpath="//app-simple-dialog//h3//strong[text()='Delete']")
+    private WebElement deleteDialog;
+
+    @FindBy(xpath = "//button[@aria-label=\"Close dialog\"]")
+    private WebElement closeDialogBtn;
 
     CommonContent common = new CommonContent();
 
@@ -55,15 +70,9 @@ public class MER_12_Content extends Parent {
 
         myElement = null;
         switch(strElement){
-            case "iban":
-                myElement = iban;
-                break;
-            case "integrationCode":
-                myElement = integrationCode;
-                break;
-            case "searchName":
-                myElement = searchName;
-                break;
+            case "iban": myElement = iban; break;
+            case "integrationCode": myElement = integrationCode; break;
+            case "searchName": myElement = searchName; break;
         }
 
         if(myElement==null){
@@ -78,12 +87,10 @@ public class MER_12_Content extends Parent {
     public void findAndClick(String strElement) {
         myElement = null;
         switch(strElement){
-            case "bankAccounts":
-                myElement = bankAccounts;
-                break;
-            case "currency":
-                myElement = currency;
-                break;
+            case "bankAccounts": myElement = bankAccounts; break;
+            case "currency": myElement = currency; break;
+            case "deleteOK": myElement = deleteAcceptBtn; break;
+            case "closeDialog": myElement = closeDialogBtn; break;
         }
 
         if(myElement == null){
@@ -97,11 +104,12 @@ public class MER_12_Content extends Parent {
     public void findAndContainsText(String strElement, String text) {
         myElement = null;
         switch(strElement){
-            case "noDataAssert" : myElement =noDataAssert; break;
-            case "addAssert" : myElement =addAssert; break;
-            case "editAssert" : myElement =editAssert; break;
-            case "deleteAssert" : myElement =deleteAssert; break;
-
+            case "noDataAssert" : myElement = noDataAssert; break;
+            case "addAssert" : myElement = addAssert; break;
+            case "editAssert" : myElement = editAssert; break;
+            case "alreadyexists":myElement = alreadyExistsAssert; break;
+            case "success": myElement = successAssert; break;
+            case "already":myElement = alreadyAssert; break;
         }
 
         if(myElement == null){
@@ -118,10 +126,14 @@ public class MER_12_Content extends Parent {
         findAndSend("searchName", searchText);
         findAndClick("searchButton");
 
-        waitUntilLoading();
+        //waitUntilLoading();
+        GWD.Bekle(3);
 
         findAndClick("deleteButton");
-        findAndClick("deleteDialogBtn");
+
+        waitUntilVisible(deleteDialog);
+
+        findAndClick("deleteOK");
     }
 
     public void findAndSelect(String strElement, String value) {
@@ -132,6 +144,7 @@ public class MER_12_Content extends Parent {
                 for (int i = 0; i < currencyItemText.size(); i++) {
                     if(currencyItemText.get(i).getText().equals(value)){
                         clickFunction(currencyItem.get(i));
+                        sendKeyBoard("ENTER");
                         sendKeyBoard("ESC");
                         break;
                     }
@@ -145,15 +158,9 @@ public class MER_12_Content extends Parent {
         int keyInt = 0;
 
         switch (key){
-            case "ESC":
-                keyInt = KeyEvent.VK_ESCAPE;
-                break;
-            case "TAB":
-                keyInt = KeyEvent.VK_TAB;
-                break;
-            case "ENTER":
-                keyInt = KeyEvent.VK_ENTER;
-                break;
+            case "ESC": keyInt = KeyEvent.VK_ESCAPE; break;
+            case "TAB": keyInt = KeyEvent.VK_TAB; break;
+            case "ENTER": keyInt = KeyEvent.VK_ENTER; break;
         }
 
         if(keyInt > 0) {
@@ -171,16 +178,16 @@ public class MER_12_Content extends Parent {
         scrollUp();
         scrollToElement(searchName);
         findAndSend("searchName", searchText);
-        findAndClick("search");
+        findAndClick("searchButton");
 
-        waitUntilLoading();
+       // waitUntilLoading();
+        GWD.Bekle(3);
 
-        findAndClick("edit");
+        findAndClick("editButton");
     }
 
     public void scrollUp() {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("window.scrollTo(0, -250)");
     }
-
 }
