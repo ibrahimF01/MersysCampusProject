@@ -10,13 +10,14 @@ import java.util.List;
 
 public class MER_12_Steps {
     MER_12_Content content = new MER_12_Content();
+
     @And("Click on the element in the left Nav")
-    public void clickOnTheElementInTheLeftNav(DataTable elements)  {
+    public void clickOnTheElementInTheLeftNav(DataTable elements) {
         List<String> elementList = elements.asList(String.class);
 
         GWD.Bekle(2);
 
-        for(int i=0; i < elementList.size();i++) {
+        for (int i = 0; i < elementList.size(); i++) {
             content.findAndClick(elementList.get(i));
         }
     }
@@ -27,7 +28,7 @@ public class MER_12_Steps {
 
         GWD.Bekle(2);
 
-        for(int i=0; i < elementList.size();i++) {
+        for (int i = 0; i < elementList.size(); i++) {
             content.findAndClick(elementList.get(i));
         }
     }
@@ -38,7 +39,7 @@ public class MER_12_Steps {
 
         GWD.Bekle(2);
 
-        for(int i=0;i<elementList.size();i++) {
+        for (int i = 0; i < elementList.size(); i++) {
             if (elementList.get(i).get(0).contains("-select"))
                 content.findAndSelect(elementList.get(i).get(0), elementList.get(i).get(1));
             else
@@ -55,7 +56,7 @@ public class MER_12_Steps {
         content.searchAndEdit(elementList.get(0).get(1));
 
         for (int i = 1; i < elementList.size(); i++) {
-            content.findAndSend(elementList.get(i).get(0),elementList.get(i).get(1));
+            content.findAndSend(elementList.get(i).get(0), elementList.get(i).get(1));
         }
     }
 
@@ -70,14 +71,14 @@ public class MER_12_Steps {
 
     @Then("Already exists massage should be displayed")
     public void alreadyExistsMassageShouldBeDisplayed() {
-        content.findAndContainsText("alreadyexists","already exists");
+        content.findAndContainsText("alreadyexists", "already exists");
         content.findAndClick("closeDialogBtn");
         GWD.Bekle(2);
     }
 
     @Then("Successfully message should be displayed")
     public void successfullymessageshouldbedisplayed() {
-        content.findAndContainsText("success","successfully");
+        content.findAndContainsText("success", "successfully");
         GWD.Bekle(2);
     }
 }

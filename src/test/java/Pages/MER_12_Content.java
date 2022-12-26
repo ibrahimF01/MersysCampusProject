@@ -12,52 +12,52 @@ import java.util.List;
 
 public class MER_12_Content extends Parent {
     public MER_12_Content() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(xpath = "//span[text()='Bank Accounts']")
     private WebElement bankAccounts;
 
-    @FindBy(xpath="//ms-masked-text-field[@formcontrolname='iban']//input")
+    @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
     private WebElement iban;
 
-    @FindBy(xpath="//mat-select[@formcontrolname='currency']")
+    @FindBy(xpath = "//mat-select[@formcontrolname='currency']")
     private WebElement currency;
 
-    @FindBy(xpath="//mat-option")
+    @FindBy(xpath = "//mat-option")
     private List<WebElement> currencyItem;
 
-    @FindBy(xpath="//mat-option//span")
+    @FindBy(xpath = "//mat-option//span")
     private List<WebElement> currencyItemText;
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']//input")
     private WebElement integrationCode;
 
-    @FindBy(xpath="//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     private WebElement searchName;
 
-    @FindBy(xpath="//div[contains(text(),'successfully created')]")
+    @FindBy(xpath = "//div[contains(text(),'successfully created')]")
     private WebElement addAssert;
 
-    @FindBy(xpath="//div[contains(text(),'successfully updated')]")
+    @FindBy(xpath = "//div[contains(text(),'successfully updated')]")
     private WebElement editAssert;
 
-    @FindBy(xpath="//div[contains(text(),'successfully')]")
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successAssert;
 
-    @FindBy(xpath="//div[contains(text(),'already exists')]")
+    @FindBy(xpath = "//div[contains(text(),'already exists')]")
     private WebElement alreadyExistsAssert;
 
-    @FindBy(xpath="//div[contains(text(),'already')]")
+    @FindBy(xpath = "//div[contains(text(),'already')]")
     private WebElement alreadyAssert;
 
-    @FindBy(xpath="//div[text()=' There is no data to display ']")
+    @FindBy(xpath = "//div[text()=' There is no data to display ']")
     private WebElement noDataAssert;
 
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteAcceptBtn;
 
-    @FindBy(xpath="//app-simple-dialog//h3//strong[text()='Delete']")
+    @FindBy(xpath = "//app-simple-dialog//h3//strong[text()='Delete']")
     private WebElement deleteDialog;
 
     @FindBy(xpath = "//button[@aria-label=\"Close dialog\"]")
@@ -69,16 +69,22 @@ public class MER_12_Content extends Parent {
     public void findAndSend(String strElement, String value) {
 
         myElement = null;
-        switch(strElement){
-            case "iban": myElement = iban; break;
-            case "integrationCode": myElement = integrationCode; break;
-            case "searchName": myElement = searchName; break;
+        switch (strElement) {
+            case "iban":
+                myElement = iban;
+                break;
+            case "integrationCode":
+                myElement = integrationCode;
+                break;
+            case "searchName":
+                myElement = searchName;
+                break;
         }
 
-        if(myElement==null){
-            common.findAndSend(strElement,value);
-        } else{
-            sendKeysFunction(myElement,value);
+        if (myElement == null) {
+            common.findAndSend(strElement, value);
+        } else {
+            sendKeysFunction(myElement, value);
         }
 
     }
@@ -86,16 +92,24 @@ public class MER_12_Content extends Parent {
     @Override
     public void findAndClick(String strElement) {
         myElement = null;
-        switch(strElement){
-            case "bankAccounts": myElement = bankAccounts; break;
-            case "currency": myElement = currency; break;
-            case "deleteOK": myElement = deleteAcceptBtn; break;
-            case "closeDialog": myElement = closeDialogBtn; break;
+        switch (strElement) {
+            case "bankAccounts":
+                myElement = bankAccounts;
+                break;
+            case "currency":
+                myElement = currency;
+                break;
+            case "deleteOK":
+                myElement = deleteAcceptBtn;
+                break;
+            case "closeDialog":
+                myElement = closeDialogBtn;
+                break;
         }
 
-        if(myElement == null){
+        if (myElement == null) {
             common.findAndClick(strElement);
-        } else{
+        } else {
             clickFunction(myElement);
         }
     }
@@ -103,19 +117,31 @@ public class MER_12_Content extends Parent {
     @Override
     public void findAndContainsText(String strElement, String text) {
         myElement = null;
-        switch(strElement){
-            case "noDataAssert" : myElement = noDataAssert; break;
-            case "addAssert" : myElement = addAssert; break;
-            case "editAssert" : myElement = editAssert; break;
-            case "alreadyexists":myElement = alreadyExistsAssert; break;
-            case "success": myElement = successAssert; break;
-            case "already":myElement = alreadyAssert; break;
+        switch (strElement) {
+            case "noDataAssert":
+                myElement = noDataAssert;
+                break;
+            case "addAssert":
+                myElement = addAssert;
+                break;
+            case "editAssert":
+                myElement = editAssert;
+                break;
+            case "alreadyexists":
+                myElement = alreadyExistsAssert;
+                break;
+            case "success":
+                myElement = successAssert;
+                break;
+            case "already":
+                myElement = alreadyAssert;
+                break;
         }
 
-        if(myElement == null){
-            common.findAndContainsText(strElement,text);
-        } else{
-            verifyContainsText(myElement,text);
+        if (myElement == null) {
+            common.findAndContainsText(strElement, text);
+        } else {
+            verifyContainsText(myElement, text);
         }
     }
 
@@ -142,7 +168,7 @@ public class MER_12_Content extends Parent {
                 findAndClick("currency");
 
                 for (int i = 0; i < currencyItemText.size(); i++) {
-                    if(currencyItemText.get(i).getText().equals(value)){
+                    if (currencyItemText.get(i).getText().equals(value)) {
                         clickFunction(currencyItem.get(i));
                         sendKeyBoard("ENTER");
                         sendKeyBoard("ESC");
@@ -154,16 +180,22 @@ public class MER_12_Content extends Parent {
         }
     }
 
-    public void sendKeyBoard(String key){
+    public void sendKeyBoard(String key) {
         int keyInt = 0;
 
-        switch (key){
-            case "ESC": keyInt = KeyEvent.VK_ESCAPE; break;
-            case "TAB": keyInt = KeyEvent.VK_TAB; break;
-            case "ENTER": keyInt = KeyEvent.VK_ENTER; break;
+        switch (key) {
+            case "ESC":
+                keyInt = KeyEvent.VK_ESCAPE;
+                break;
+            case "TAB":
+                keyInt = KeyEvent.VK_TAB;
+                break;
+            case "ENTER":
+                keyInt = KeyEvent.VK_ENTER;
+                break;
         }
 
-        if(keyInt > 0) {
+        if (keyInt > 0) {
             try {
                 Robot robot = new Robot();
                 robot.keyPress(keyInt);
@@ -174,13 +206,13 @@ public class MER_12_Content extends Parent {
         }
     }
 
-    public void searchAndEdit(String searchText){
+    public void searchAndEdit(String searchText) {
         scrollUp();
         scrollToElement(searchName);
         findAndSend("searchName", searchText);
         findAndClick("searchButton");
 
-       // waitUntilLoading();
+        // waitUntilLoading();
         GWD.Bekle(3);
 
         findAndClick("editButton");
