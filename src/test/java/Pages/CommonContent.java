@@ -107,6 +107,8 @@ public class CommonContent extends Parent{
     private WebElement acceptCookies;
     @FindBy(xpath = "//span[text()='Fields']")
     private WebElement Fields;
+    @FindBy(xpath = "//fuse-nav-vertical-item//span[text()='States']")
+    private WebElement States;
 
 
 
@@ -151,6 +153,7 @@ public class CommonContent extends Parent{
             case "fieldSettings" : myElement =fieldSettings; break;
             case "Fields" : myElement =Fields; break;
             case "discounts" : myElement =discounts; break;
+            case "States" : myElement =States; break;
         }
 
         clickFunction(myElement);
