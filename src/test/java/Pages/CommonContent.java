@@ -33,6 +33,8 @@ public class CommonContent extends Parent{
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
     private WebElement entranceExamsOne;
 
+    @FindBy(xpath = "//span[text()='Grade Levels']")
+    private WebElement gradeLevels;
     @FindBy(xpath = "(//span[text()='Setup'])[2]")
     private WebElement setupTwo;
 
@@ -152,8 +154,10 @@ public class CommonContent extends Parent{
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "fieldSettings" : myElement =fieldSettings; break;
             case "Fields" : myElement =Fields; break;
+            case "gradeLevels": myElement = gradeLevels;break;
             case "discounts" : myElement =discounts; break;
             case "States" : myElement =States; break;
+
         }
 
         clickFunction(myElement);

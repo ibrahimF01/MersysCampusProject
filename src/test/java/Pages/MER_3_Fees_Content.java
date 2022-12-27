@@ -1,16 +1,13 @@
 package Pages;
 
 import Utilities.GWD;
-import Utilities.GWDBasic;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static java.awt.SystemColor.text;
+public class MER_3_Fees_Content extends Parent {
 
-public class DialogContent_OA extends Parent {
-
-    public DialogContent_OA() {
+    public MER_3_Fees_Content() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
