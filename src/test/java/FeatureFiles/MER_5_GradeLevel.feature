@@ -7,7 +7,7 @@ Feature: Grade Level Functionality
 
   Scenario Outline: Add Grade Level
 
-    And Click on the element in the left Nav
+    And Click on the element in the Left Nav
 
       | setupOne    |
       | parameters  |

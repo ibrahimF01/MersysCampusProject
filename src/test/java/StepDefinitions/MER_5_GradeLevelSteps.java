@@ -67,8 +67,8 @@ public class MER_5_GradeLevelSteps {
         gdc.findAndClick("deleteButton");
     }
 
-    @And("Click on the element in the left Nav")
-    public void clickOnTheElementInTheLeftNav(DataTable elements) {
+    @And("Click on the element in the Left Nav")
+    public void clickOnTheElementInTheleftNav(DataTable elements) {
 
         List<String> listElement = elements.asList(String.class);
         for (String s : listElement) cc.findAndClick(s);
