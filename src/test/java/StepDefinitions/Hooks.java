@@ -22,6 +22,7 @@ public class Hooks {
         CommonUtils.loadProperties();
         System.out.println("Senaryo başladı");
 
+
     }
 
     @After
