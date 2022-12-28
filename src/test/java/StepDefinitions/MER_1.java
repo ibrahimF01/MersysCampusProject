@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.CommonContent;
 import Pages.MER_1_content;
+import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -79,6 +80,7 @@ public class MER_1 {
     public void registeredCountryMustBeDeleted() {
         mr.findAndSend("SearcName","AlTaYKoY");
         cc.findAndClick("searchButton");
+        GWD.Bekle(1);
         cc.findAndClick("deleteButton");
         cc.findAndClick("deleteDialogBtn");
 

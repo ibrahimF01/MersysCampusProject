@@ -8,8 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 
 @CucumberOptions(
-        tags = "@Regression",
-        features = {"src/test/java/FeatureFiles/_01_Login.feature"},
+//        tags = "@Regression",
+        features = {"src/test/java/FeatureFiles/"},
         glue = {"StepDefinitions"}
 )
 @Listeners({ExtentITestListenerClassAdapter.class})

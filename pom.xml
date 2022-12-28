@@ -191,7 +191,7 @@
 
                             <includes>
                                 <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                                <include>**/_04_TestRunnerSmoke.java</include>
+                                <include>**/_07_TestRunnerExtentReport.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
 
