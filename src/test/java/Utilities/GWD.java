@@ -44,7 +44,8 @@ public class GWD {
                     WebDriverManager.chromedriver().setup();
                     if(!runningFromIntelliJ()) {
                         ChromeOptions options = new ChromeOptions();//hafızada maximize modda çalıştırmak için eklendi
-          //    arka planda çalıştırma         // options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+          //    arka planda çalıştırma         
+                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
                         threadDriver.set(new ChromeDriver(options)); // bu thread e chrome istenmişşse ve yoksa bir tane ekleniyor
                     }
                     else threadDriver.set(new ChromeDriver());
