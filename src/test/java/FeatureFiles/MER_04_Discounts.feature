@@ -1,12 +1,14 @@
 Feature: Discounts Functionality
 
-    And Click the headers under Left Navigation Bar
+  Background:
+    When Click the headers under Left Navigation Bar
       | setupOne   |
       | parameters |
       | discounts  |
 
   @Regression_hy
   Scenario:Creating a new record of Discounts
+
     When Click the following
       | addButton |
 
