@@ -5,6 +5,7 @@ Feature: Discounts Functionality
       | parameters |
       | discounts  |
 
+  @Regression_hy
   Scenario:Creating a new record of Discounts
     When Click the following
       | addButton |
@@ -21,6 +22,7 @@ Feature: Discounts Functionality
     Then Status message should appear on the screen
       | successMessage | successfully |
 
+  @Regression_hy
   Scenario:Creating a new record of Discounts - Negative
     When Click the following
       | addButton |
@@ -37,6 +39,7 @@ Feature: Discounts Functionality
     Then Status message should appear on the screen
       | failureMessage | already exists |
 
+  @Regression_hy
   Scenario: Editing the record
     When Fill in the following fields
       | descriptionSearch | Desc_hy |
@@ -60,6 +63,7 @@ Feature: Discounts Functionality
     Then Status message should appear on the screen
       | successMessage | successfully |
 
+  @Regression_hy
   Scenario: Deleting the record
     When Fill in the following fields
       | descriptionSearch | Desc_hy1 |
@@ -73,6 +77,7 @@ Feature: Discounts Functionality
     Then Status message should appear on the screen
       | successMessage | successfully |
 
+  @Regression_hy
   Scenario: Deleting the record - Negative
     When Fill in the following fields
       | descriptionSearch | Desc_hy1 |
