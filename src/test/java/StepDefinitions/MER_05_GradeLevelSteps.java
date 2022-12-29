@@ -1,22 +1,17 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_5_GradeLevel_Content;
-import Utilities.GWDBasic;
+import Pages.MER_05_GradeLevelCont;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
-public class MER_5_GradeLevelSteps {
+public class MER_05_GradeLevelSteps {
 
     CommonContent cc = new CommonContent();
-    MER_5_GradeLevel_Content gdc = new MER_5_GradeLevel_Content();
+    MER_05_GradeLevelCont gdc = new MER_05_GradeLevelCont();
     @And("Create to new GradeLevel")
     public void createToNewGradeLevel(DataTable elements) {
 

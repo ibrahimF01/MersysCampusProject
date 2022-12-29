@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_9_Content;
+import Pages.MER_09_StatesCont;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -9,8 +9,8 @@ import io.cucumber.java.en.Then;
 
 import java.util.List;
 
-public class MER_9_States {
-    MER_9_Content mc=new MER_9_Content();
+public class MER_09_StatesSteps {
+    MER_09_StatesCont mc=new MER_09_StatesCont();
     CommonContent cc=new CommonContent();
 
     @And("Select country")

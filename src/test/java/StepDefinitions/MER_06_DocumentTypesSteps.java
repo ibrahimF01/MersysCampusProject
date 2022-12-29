@@ -1,28 +1,20 @@
 package StepDefinitions;
 
-import Pages.CommonContent;
-import Pages.MER_06_ORC;
+import Pages.MER_06_DocumentTypesCont;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.time.Duration;
 
-public class MER_06_DTP_FUNC {
+public class MER_06_DocumentTypesSteps {
 
 
-    MER_06_ORC mrc = new MER_06_ORC();
+    MER_06_DocumentTypesCont mrc = new MER_06_DocumentTypesCont();
 
 
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));

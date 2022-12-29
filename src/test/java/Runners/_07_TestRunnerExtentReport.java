@@ -8,9 +8,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 
 @CucumberOptions(
-//        tags = "@Regression",
         features = {"src/test/java/FeatureFiles/"},
-        glue = {"StepDefinitions"}
+        glue = {"StepDefinitions"},
+        plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
 )
 @Listeners({ExtentITestListenerClassAdapter.class})
 public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {

@@ -1,16 +1,16 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_11_Content;
+import Pages.MER_11_FieldSettingCont;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class MER_11_FieldSettings {
+public class MER_11_FieldSettingsSteps {
     CommonContent cc = new CommonContent();
-    MER_11_Content mer11 = new MER_11_Content();
+    MER_11_FieldSettingCont mer11 = new MER_11_FieldSettingCont();
 
 
     @Given("Navigate to Field Setting page")

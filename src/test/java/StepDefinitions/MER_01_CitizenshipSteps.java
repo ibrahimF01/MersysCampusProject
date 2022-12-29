@@ -1,17 +1,15 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_1_content;
+import Pages.MER_01_CitizenshipCont;
 import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
-public class MER_1 {
+public class MER_01_CitizenshipSteps {
     CommonContent cc = new CommonContent();
-    MER_1_content mr= new MER_1_content();
+    MER_01_CitizenshipCont mr= new MER_01_CitizenshipCont();
 
     @Given("Click on the Citizenship tab")
     public void clickOnTheCitizenshipTab() {

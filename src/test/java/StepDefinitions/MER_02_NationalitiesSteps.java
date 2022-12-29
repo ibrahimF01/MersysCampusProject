@@ -1,16 +1,16 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_02_Content;
+import Pages.MER_02_NationalitiesCont;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class MER_02_Steps {
+public class MER_02_NationalitiesSteps {
     CommonContent cc = new CommonContent();
-    MER_02_Content mer02Content=new MER_02_Content();
+    MER_02_NationalitiesCont mer02Content=new MER_02_NationalitiesCont();
 
     @Given("Navigate to Nationalities Page functionality")
     public void navigateToNationalitiesPageFunctionality() {

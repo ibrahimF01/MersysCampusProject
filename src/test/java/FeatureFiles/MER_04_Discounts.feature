@@ -1,10 +1,5 @@
 Feature: Discounts Functionality
 
-  Background: Log in to the Campus App > Discounts
-    Given Navigate to Campus
-    When Enter username and password and click login button
-    Then User should login successfully
-
     And Click the headers under Left Navigation Bar
       | setupOne   |
       | parameters |

@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class MER_1_content extends Parent{
-    public MER_1_content(){
+public class MER_01_CitizenshipCont extends Parent{
+    public MER_01_CitizenshipCont(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
     @FindBy(css="[data-placeholder='Name']")

@@ -10,8 +10,8 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
-public class MER_12_Content extends Parent {
-    public MER_12_Content() {
+public class MER_12_BankAccountCont extends Parent {
+    public MER_12_BankAccountCont() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

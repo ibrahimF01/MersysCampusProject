@@ -1,5 +1,7 @@
 package StepDefinitions;
 ;
+import Constants.ConstantsClass;
+import Pages.CommonContent;
 import Utilities.CommonUtils;
 import Utilities.GWD;
 import com.aventstack.extentreports.service.ExtentTestManager;
@@ -21,7 +23,7 @@ public class Hooks {
     public void before() {
         CommonUtils.loadProperties();
         System.out.println("Senaryo başladı");
-
+        Login();
 
     }
 
@@ -58,5 +60,15 @@ public class Hooks {
     public String getBase64Screenshot()
     {
         return ((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BASE64);
+    }
+    public static void Login(){
+        CommonContent cc=new CommonContent();
+        GWD.getDriver().get(ConstantsClass.AppUrl);
+        GWD.getDriver().manage().window().maximize();
+        cc.findAndSend("username",ConstantsClass.UserName);
+        cc.findAndSend("password",ConstantsClass.Password);
+        cc.findAndClick("loginButton");
+        cc.findAndClick("acceptCookies");
+        cc.findAndContainsText("dashboard","Dashboard");
     }
 }

@@ -5,11 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+public class MER_06_DocumentTypesCont extends Parent {
 
-public class MER_06_ORC extends Parent {
-
-    public MER_06_ORC() {
+    public MER_06_DocumentTypesCont() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

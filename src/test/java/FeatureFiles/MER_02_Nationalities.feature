@@ -1,11 +1,5 @@
 Feature:Nationalities Functionality
 
-  Background:
-
-    Given Navigate to Campus
-    When Enter username and password and click login button
-    Then User should login successfully
-
   Scenario Outline: Nationalities Page Functionality
 
     Given Navigate to Nationalities Page functionality

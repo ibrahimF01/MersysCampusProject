@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_10_Content;
+import Pages.MER_10_FieldsCont;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
@@ -9,9 +9,9 @@ import io.cucumber.java.en.*;
 import java.util.List;
 
 
-public class MER_10_Fields {
+public class MER_10_FieldsSteps {
     CommonContent cc=new CommonContent();
-    MER_10_Content mc=new MER_10_Content();
+    MER_10_FieldsCont mc=new MER_10_FieldsCont();
 
     @And("Click on the Left Nav")
     public void clickOnTheLeftNav(DataTable elements) {

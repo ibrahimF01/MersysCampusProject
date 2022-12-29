@@ -1,8 +1,8 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_04_Content;
-import Pages.MER_10_Content;
+import Pages.MER_04_DiscountsCont;
+import Pages.MER_10_FieldsCont;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -11,10 +11,10 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
-public class MER_04_Discounts {
+public class MER_04_DiscountsSteps {
     CommonContent cc = new CommonContent();
-    MER_04_Content mer4 = new MER_04_Content();
-    MER_10_Content mc=new MER_10_Content();
+    MER_04_DiscountsCont mer4 = new MER_04_DiscountsCont();
+    MER_10_FieldsCont mc=new MER_10_FieldsCont();
 
     @And("Click the headers under Left Navigation Bar")
     public void ClickTheHeadersUnderLeftNavigationBar(DataTable elements) {

@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.MER_12_Content;
+import Pages.MER_12_BankAccountCont;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -8,8 +8,8 @@ import io.cucumber.java.en.Then;
 
 import java.util.List;
 
-public class MER_12_Steps {
-    MER_12_Content content = new MER_12_Content();
+public class MER_12_BankAccountSteps {
+    MER_12_BankAccountCont content = new MER_12_BankAccountCont();
 
     @And("Click on the element in the left Nav")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {

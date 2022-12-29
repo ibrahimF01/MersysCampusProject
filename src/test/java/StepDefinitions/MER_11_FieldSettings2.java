@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_11_Content;
+import Pages.MER_11_FieldSettingCont;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MER_11_FieldSettings2 {
     CommonContent cc = new CommonContent();
-    MER_11_Content mer11 = new MER_11_Content();
+    MER_11_FieldSettingCont mer11 = new MER_11_FieldSettingCont();
 
     @Given("Navigate to Field Setting menu")
     public void navigateToFieldSettingMenu(DataTable elements) {

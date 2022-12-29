@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class MER_11_Content extends Parent{
+public class MER_11_FieldSettingCont extends Parent{
 
-    public MER_11_Content(){
+    public MER_11_FieldSettingCont(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
     @FindBy(xpath="(//div[contains(@id,'mat-select-value')])[1]")

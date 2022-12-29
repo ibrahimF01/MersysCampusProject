@@ -1,10 +1,5 @@
 Feature: Grade Level Functionality
 
-  Background:
-    Given Navigate to Campus
-    When Enter username and password and click login button
-    Then User should login successfully
-
   Scenario Outline: Add Grade Level
 
     And Click on the element in the Left Nav

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MER_02_Content extends Parent {
+public class MER_02_NationalitiesCont extends Parent {
 
-    public MER_02_Content() {
+    public MER_02_NationalitiesCont() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

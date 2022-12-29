@@ -1,12 +1,5 @@
 Feature: Citizenships Page functionality
 
-
-  Background:
-
-    Given Navigate to Campus
-    When Enter username and password and click login button
-    Then User should login successfully
-
   Scenario: User should be able to create new citizionships with required informations
     Given Click on the Citizenship tab
     When New country must be registered

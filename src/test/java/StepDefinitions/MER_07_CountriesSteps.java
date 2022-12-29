@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_07_Content;
+import Pages.MER_07_CountriesCont;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
@@ -12,10 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class MER_07_Steps {
+public class MER_07_CountriesSteps {
 
     CommonContent cc=new CommonContent();
-    MER_07_Content mer7 = new MER_07_Content();
+    MER_07_CountriesCont mer7 = new MER_07_CountriesCont();
 
     @Given("Navigate to Countries Setting Menu")
     public void navigateToCountriesSettingMenu(DataTable elements) {

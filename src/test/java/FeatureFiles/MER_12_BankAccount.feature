@@ -1,9 +1,6 @@
 Feature: Add, Edit And Delete Bank Accounts Functionality
 
   Background:
-    Given Navigate to Campus
-    When Enter username and password and click login button
-    Then User should login successfully
     And Click on the element in the left Nav
       | setupOne     |
       | parameters   |

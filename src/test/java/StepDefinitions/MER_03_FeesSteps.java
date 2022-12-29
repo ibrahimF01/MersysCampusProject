@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.CommonContent;
-import Pages.MER_3_Fees_Content;
+import Pages.MER_03_FeesCont;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -9,10 +9,10 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
-public class MER_3_FeesFeatureSteps {
+public class MER_03_FeesSteps {
 
     CommonContent cc = new CommonContent();
-    MER_3_Fees_Content dcOA = new MER_3_Fees_Content();
+    MER_03_FeesCont dcOA = new MER_03_FeesCont();
     @And("Navigate to Fees Functionality")
     public void navigateToFeesFunctionality(DataTable elements) {
 

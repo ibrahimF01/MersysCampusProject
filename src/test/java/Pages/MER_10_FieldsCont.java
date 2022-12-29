@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MER_10_Content extends Parent{
+public class MER_10_FieldsCont extends Parent{
 
-    public MER_10_Content() {
+    public MER_10_FieldsCont() {
         PageFactory.initElements(GWD.getDriver(),this);}
 
     @FindBy(css="ms-add-button[tooltip]>div>button")

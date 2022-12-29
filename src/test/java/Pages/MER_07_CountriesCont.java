@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MER_07_Content extends Parent {
+public class MER_07_CountriesCont extends Parent {
 
-    public MER_07_Content(){
+    public MER_07_CountriesCont(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
     @FindBy(xpath = "//button[text()='Accept all cookies']")

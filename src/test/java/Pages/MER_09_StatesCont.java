@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MER_9_Content extends Parent{
-    public MER_9_Content() {PageFactory.initElements(GWD.getDriver(),this);}
+public class MER_09_StatesCont extends Parent{
+    public MER_09_StatesCont() {PageFactory.initElements(GWD.getDriver(),this);}
 
     @FindBy(css="ms-dialog-content mat-form-field mat-select")
     private WebElement CountrySelect;
