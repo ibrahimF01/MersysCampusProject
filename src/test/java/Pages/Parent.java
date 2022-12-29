@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public abstract class Parent{
+public abstract class Parent implements IMethodContent {
     WebElement myElement;
 
     public void sendKeysFunction(WebElement element, String value) {//3.Aşama
@@ -63,20 +63,5 @@ public abstract class Parent{
         return elementList;
     }
 
-    void findAndSend(String strElement, String value) {
-
-    }
-
-    void findAndClick(String strElement) {
-
-    }
-
-    void findAndContainsText(String strElement, String text) {
-
-    }
-
-    void SearchAndDelete(String searchText) {
-
-    }
 
 }
