@@ -215,7 +215,7 @@
 
                             <includes>
                                 <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                                <include>**/_08_TestRunnerParallel.java</include>
+                                <include>**/_02_TestRunnerSpecificFeatures.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
 
