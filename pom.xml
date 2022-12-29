@@ -167,7 +167,7 @@
 
                 <includes>
                     <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                    <include>**/_08_TestRunnerParallel.java</include>
+                    <include>**/_07_TestRunnerExtentReport.java</include>
                 </includes>
                 <testFailureIgnore>true</testFailureIgnore>
 
@@ -179,7 +179,7 @@
 
     <profiles>
         <profile>
-            <id>Smoke_All</id>
+            <id>Smoke_yeni</id>
             <build>
 
                 <plugins>
@@ -215,7 +215,7 @@
 
                             <includes>
                                 <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                                <include>**/_08_TestRunnerParallel_ExtendReport.java</include>
+                                <include>**/_06_TestRunnerRegressionWithPlugin.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
 
