@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suit 1"  parallel="tests" thread-count="2">
     <listeners>
-        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"></listener>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter"></listener>
     </listeners>
     <test name="Test 1">
         <parameter name="browser" value="firefox"></parameter>
