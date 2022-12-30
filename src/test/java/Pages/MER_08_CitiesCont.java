@@ -7,11 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MER_08_CitiesCont extends Parent{
     public MER_08_CitiesCont(){
-        PageFactory.initElements(GWD.getDriver(),this);
+
     }
 
-    @FindBy(xpath = "//button[text()='Accept all cookies']")
-    private WebElement acceptCookies112;
+
     @FindBy(xpath = "//span[text()='Setup'][1]")
     private WebElement setupOne;
 
@@ -37,7 +36,7 @@ public class MER_08_CitiesCont extends Parent{
     private WebElement CountrySearch;
     @FindBy(xpath="//span[text()=' Germany ']")
     private WebElement CountrySearchGermany;
-    @FindBy(xpath="//input[@type='text']")   //   //ms-text-field[@placeholder='GENERAL.FIELD.NAME']
+    @FindBy(xpath="//input[@type='text']")
     private WebElement SearchName;
     @FindBy(css="div[fxlayoutalign='center center'][class='control-full']")
     private WebElement SearchButton;
@@ -73,7 +72,7 @@ public class MER_08_CitiesCont extends Parent{
     @Override
     public void findAndClick(String strElement) {
         switch (strElement) {
-            case "acceptCookies112":myElement=acceptCookies112;break;
+
             case "setupOne":myElement=setupOne;break;
             case "parameters":myElement=parameters;break;
             case "clickCities":myElement=clickCities;break;
@@ -113,9 +112,6 @@ public class MER_08_CitiesCont extends Parent{
 
         findAndClick("SearchButton");
 
-
-       // WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-       // wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"CountrySearch"));
 
         findAndClick("deleteButton");
         findAndClick("delete");

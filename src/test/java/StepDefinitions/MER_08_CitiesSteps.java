@@ -16,19 +16,14 @@ public class MER_08_CitiesSteps{
 
 
 
-    WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-
-
     @And("Click Setup ,paramenters, cities section")
     public void clickSetupParamentersCitiesSection() throws InterruptedException {
-        Thread.sleep(3000);
+
         mr.findAndClick("acceptCookies112");
         mr.findAndClick("setupOne");
         mr.findAndClick("parameters");
         mr.findAndClick("clickCities");
-        //Thread.sleep(3000);
         mr.findAndClick("addButton");
-        Thread.sleep(3000);
 
 
     }
@@ -36,12 +31,8 @@ public class MER_08_CitiesSteps{
     @When("Create country ,name section")
     public void createCountrynameSection() throws InterruptedException {
         mr.findAndClick("ClickCountry");
-        Thread.sleep(3000);
         mr.findAndClick("clickCountryGermany");
-        Thread.sleep(3000);
-
         mr.findAndSend("nameInput", "pelin");
-        Thread.sleep(3000);
         mr.findAndClick("saveButton");
 
 
@@ -52,16 +43,10 @@ public class MER_08_CitiesSteps{
 
         mr.findAndClick("CountrySearch");
         mr.findAndClick("CountrySearchGermany");
-
-        // mr.findAndSend("SearchName","pelin");
-
         mr.findAndClick("SearchButton");
         mr.findAndClick("editButton");
-
-        // mr.findAndClick("editCountry");
         mr.clickFunction(mr.getEditName());
-          mr.getEditName().clear();
-         // mr.sendKeysFunction(mr.getEditName(),"pelin1");
+        mr.getEditName().clear();
         mr.findAndSend("editName", "pelin1");
         mr.findAndClick("saveButton");
 
@@ -71,8 +56,6 @@ public class MER_08_CitiesSteps{
     public void deleteCountrySection() {
 
         mr.SearchAndDelete("pelin1");
-
-
 
 
 
