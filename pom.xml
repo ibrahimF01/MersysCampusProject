@@ -167,7 +167,7 @@
 
                 <includes>
                     <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                    <include>**/_07_TestRunnerExtentReport.java</include>
+                    <include>**/_02_TestRunnerSpecificFeatures.java</include>
                 </includes>
                 <testFailureIgnore>true</testFailureIgnore>
 
@@ -179,7 +179,7 @@
 
     <profiles>
         <profile>
-            <id>Smoke_yeni</id>
+            <id>Smoke_All</id>
             <build>
 
                 <plugins>
@@ -215,7 +215,7 @@
 
                             <includes>
                                 <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                                <include>**/_06_TestRunnerRegressionWithPlugin.java</include>
+                                <include>**/_02_TestRunnerSpecificFeatures.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
 
@@ -225,29 +225,7 @@
 
             </build>
         </profile>
-        <profile>
-            <id>Fields</id>
-            <build>
 
-                <plugins>
-                    <plugin><!--derlemek için-->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.0.0-M1</version>
-                        <configuration>
-
-                            <includes>
-                                <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                                <include>**/_07_TestRunnerExtentReportFields.java</include>
-                            </includes>
-                            <testFailureIgnore>true</testFailureIgnore>
-
-                        </configuration>
-                    </plugin>
-                </plugins>
-
-            </build>
-        </profile>
     </profiles>
 
 </project>
