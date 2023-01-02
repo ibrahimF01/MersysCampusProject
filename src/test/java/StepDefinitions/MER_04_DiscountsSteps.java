@@ -16,7 +16,7 @@ public class MER_04_DiscountsSteps {
     MER_04_DiscountsCont mer4 = new MER_04_DiscountsCont();
     MER_10_FieldsCont mc=new MER_10_FieldsCont();
 
-    @And("Click the headers under Left Navigation Bar")
+    @When("Click the headers under Left Navigation Bar")
     public void ClickTheHeadersUnderLeftNavigationBar(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
 

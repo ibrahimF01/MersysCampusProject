@@ -45,6 +45,13 @@ public class CommonContent extends Parent{
     @FindBy(xpath="//span[text()='Discounts']")
     private WebElement discounts;
 
+    @FindBy(xpath="//span[text()='School Setup']")
+    private WebElement schoolSetup;
+
+    @FindBy(xpath="//span[text()='Departments']")
+    private WebElement departments;
+
+
     //DialogContent
     @FindBy(id="mat-input-0")
     private WebElement username;
@@ -105,8 +112,10 @@ public class CommonContent extends Parent{
 
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
+
     @FindBy(xpath = "//span[text()='Fields']")
     private WebElement Fields;
+
     @FindBy(xpath = "//fuse-nav-vertical-item//span[text()='States']")
     private WebElement States;
 
@@ -155,6 +164,8 @@ public class CommonContent extends Parent{
             case "gradeLevels": myElement = gradeLevels;break;
             case "discounts" : myElement =discounts; break;
             case "States" : myElement =States; break;
+            case "schoolSetup" : myElement =schoolSetup; break;
+            case "departments" : myElement =departments; break;
 
         }
 
