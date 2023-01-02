@@ -10,7 +10,7 @@ Feature: Fields Functionality
     And Click on the Plus Button
       | addButton1 |
     And Enter name and code
-      | nameInput | Jhon Wick |
+      | nameInput | John Wick |
       | codeInput | 012627    |
     And Check if others can selected and select Field Type
     And Click on the translation button and check the functions
@@ -23,7 +23,7 @@ Feature: Fields Functionality
     And Click on the Plus Button
       | addButton1 |
     And Enter name and code
-      | nameInput | Jhon Wick |
+      | nameInput | John Wick |
       | codeInput | 012627    |
     And Click on the save button
       | saveButton |
@@ -32,7 +32,7 @@ Feature: Fields Functionality
   @Regression
   Scenario:Editing Fields
     And Enter name in search field
-      | searchInput | Jhon Wick |
+      | searchInput | John Wick |
     And Click on the search button
       | searchButton |
     And Click on the edit button

@@ -7,7 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 @CucumberOptions(
-        tags = "@Regression_HY or @Regression_hy",
+        tags = "@Regression",
         features = {"src/test/java/FeatureFiles/"},
         glue = {"StepDefinitions"}
 )
